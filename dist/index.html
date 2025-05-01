@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="generator" content="AKIA Gestoria" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>AKIA Gestoria</title>>
+		<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+		<!-- Calendly inline widget end -->
+		<script type="module" crossorigin src="/assets/index-94628eb2.js"></script>
+		<link rel="stylesheet" href="/assets/index-675629af.css">
+		<script type="module">
+						window.onerror = (message, source, lineno, colno, errorObj) => {
+							window.parent.postMessage({
+								type: 'horizons-runtime-error',
+								message,
+								source,
+								lineno,
+								colno,
+								error: errorObj && errorObj.stack
+							}, '*');
+						};
+					</script>
+		<script type="module">
+						const observer = new MutationObserver((mutations) => {
+							for (const mutation of mutations) {
+								for (const addedNode of mutation.addedNodes) {
+									if (
+										addedNode.nodeType === Node.ELEMENT_NODE &&
+										(
+											addedNode.tagName?.toLowerCase() === 'vite-error-overlay' ||
+											addedNode.classList?.contains('backdrop')
+										)
+									) {
+										handleViteOverlay(addedNode);
+									}
+								}
+							}
+						});
+
+						observer.observe(document.documentElement, {
+							childList: true,
+							subtree: true
+						});
+
+						function handleViteOverlay(node) {
+							if (!node.shadowRoot) {
+								return;
+							}
+
+							const backdrop = node.shadowRoot.querySelector('.backdrop');
+
+							if (backdrop) {
+								const overlayHtml = backdrop.outerHTML;
+								const parser = new DOMParser();
+								const doc = parser.parseFromString(overlayHtml, 'text/html');
+								const messageBodyElement = doc.querySelector('.message-body');
+								const fileElement = doc.querySelector('.file');
+								const messageText = messageBodyElement ? messageBodyElement.textContent.trim() : '';
+								const fileText = fileElement ? fileElement.textContent.trim() : '';
+								const error = messageText + (fileText ? ' File:' + fileText : '');
+
+								window.parent.postMessage({
+									type: 'horizons-vite-error',
+									error,
+								}, '*');
+							}
+						}
+					</script>
+		<script type="module">
+						const originalConsoleError = console.error;
+						console.error = function(...args) {
+							originalConsoleError.apply(console, args);
+
+							const errorString = args.map(arg => typeof arg === 'object' ? JSON.stringify(arg) : String(arg)).join(' ').toLowerCase();
+							let errorObj = null;
+							for (const arg of args) {
+								if (arg instanceof Error) {
+									errorObj = {
+										message: arg.message,
+										stack: arg.stack,
+										name: arg.name
+									};
+									break;
+								} else if (arg && typeof arg === 'object' && (arg.message || arg.code || arg.stack || arg.details)) {
+									errorObj = arg;
+									break;
+								}
+							}
+
+							// Parse any JSON strings
+							if (!errorObj) {
+								for (const arg of args) {
+									if (typeof arg !== 'string') {
+										continue;
+									}
+									
+									try {
+										// Try to parse JSON
+										const parsed = JSON.parse(arg);
+										if (parsed && typeof parsed === 'object' && (parsed.message || parsed.details || parsed.code)) {
+											errorObj = parsed;
+											break;
+										}
+									} catch (e) {
+										// Continue to next arg
+									}
+								}
+							}
+
+							// Fallback
+							if (!errorObj) {
+								errorObj = { message: errorString };
+							}
+							window.parent.postMessage({
+								type: 'horizons-console-error',
+								message: errorObj.message || errorString,
+								error: errorObj
+							}, '*');
+						};
+					</script>
+	</head>
+	<body>
+		<div id="root"></div>
+		
+		<!-- Calendly badge widget begin -->
+		<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+		<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				Calendly.initBadgeWidget({
+					url: 'https://calendly.com/innovaclicceo/fem-un-cafe?hide_gdpr_banner=1&background_color=64d2dc&primary_color=f79e18',
+					text: "Fem un cafè? Explica'ns les teves necessitats.",
+					color: '#64d2dc',
+					textColor: '#ffffff'
+				});
+
+				document.getElementById('demana-cita').onclick = function() {
+					Calendly.showPopupWidget('https://calendly.com/innovaclicceo/fem-un-cafe?hide_gdpr_banner=1&background_color=64d2dc&primary_color=f79e18');
+				};
+			};
+		</script>		<!-- Calendly badge widget end -->
+	</body>
+</html>

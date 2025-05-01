@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<meta name="generator" content="AKIA Gestoria" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>AKIA Gestoria</title>>
+		<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+		<!-- Calendly inline widget end -->
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/main.jsx"></script>
+		<!-- Calendly badge widget begin -->
+		<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+		<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+		<script type="text/javascript">
+			window.onload = function() {
+				Calendly.initBadgeWidget({
+					url: 'https://calendly.com/innovaclicceo/fem-un-cafe?hide_gdpr_banner=1&background_color=64d2dc&primary_color=f79e18',
+					text: "Fem un cafè? Explica'ns les teves necessitats.",
+					color: '#dc2f2f',
+					textColor: '#ffffff'
+				});
+
+				document.getElementById('demana-cita').onclick = function() {
+					Calendly.showPopupWidget('https://calendly.com/innovaclicceo/fem-un-cafe?hide_gdpr_banner=1&background_color=64d2dc&primary_color=f79e18');
+				};
+			};
+		</script>		<!-- Calendly badge widget end -->
+	</body>
+</html>
