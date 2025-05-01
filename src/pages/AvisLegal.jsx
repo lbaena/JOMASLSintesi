@@ -42,7 +42,7 @@ export default function AvisLegal() {
                 </p>
                 <ul className="list-disc pl-6 mt-4">
                   <li>Raó social: AKIA SL</li>
-                  <li>Domicili: Plaça de la Sardana, 4, 08720 Vilafranca del Penedès</li>
+                  <li>Domicili: Aving. Tarragona, 12, 08720 Vilafranca del Penedès</li>
                   <li>NIF: [Número d'Identificació Fiscal]</li>
                   <li>Telèfon: +34 938 90 12 34</li>
                   <li>Correu electrònic: gestoria.akia@gmail.com</li>

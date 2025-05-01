@@ -90,9 +90,11 @@ export function App() {
     <div className="min-h-screen bg-white">
       <header className="bg-white shadow-sm fixed w-full top-0 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+          <a href={"/"} className="flex items-center">
           <div className="flex items-center">
             <img alt="Logo Joma" className="h-10" src="/logo_joma.png" />
           </div>
+          </a>
           <div className="hidden md:flex space-x-8">
             <a href="#qui-som" className="text-gray-700 hover:text-secondary">Qui Som</a>
             <a href="#serveis" className="text-gray-700 hover:text-secondary">Serveis</a>
