@@ -21,7 +21,7 @@
        try {
          const response = await emailjs.send(
            'service_g438c8m', // Replace with your EmailJS service ID
-           'template_qahfo4x', // Replace with your EmailJS template ID
+           'template_84w29yw', // Replace with your EmailJS template ID
              data,
            '2fB35srBEUplVX9eF' // Replace with your EmailJS user ID
          );
