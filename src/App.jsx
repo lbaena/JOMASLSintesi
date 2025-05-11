@@ -371,9 +371,9 @@ export function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">AKIA Gestoria</h3>
+              <h3 className="text-lg font-semibold mb-4">Joma Global Solutions</h3>
               <p className="text-gray-400">
-                Professionals en assessorament i gestió empresarial
+                Professionals en serveis de transport i logística
               </p>
             </div>
             <div>
@@ -418,7 +418,7 @@ export function App() {
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 text-center">
             <p className="text-gray-400">
-              © {new Date().getFullYear()} AKIA Gestoria. Tots els drets reservats.
+              © {new Date().getFullYear()} Joma Global Solutions. Tots els drets reservats.
             </p>
           </div>
         </div>
